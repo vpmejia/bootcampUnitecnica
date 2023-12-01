@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../img/map_Icon.png" type="image/png">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <title>Conociendo paises</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="../img/tierra.jpeg" alt="earth" style="width:100%">
+    <div class="top-right">
+      <input list="nameCountries" id="searchCountries" name="countries" placeholder="¿Qué país quieres conocer hoy?">
+      <datalist id="chooseCountry"></datalist>
+      <button type="button" id="btnSearch" onclick="selectedSearch()">Search</button>
+    </div>
+  </div>
+
+  <div class="box-information">
+    <p>En esta página encontrarás información sobre los países del planeta tierra,
+      puedes filtrar para conocer cerca de 250 países. Se encuentra lo mayor posible en traducción al idioma español</p>
+  </div>
+
+  <div>
+    <span>DATOS INTERESANTES</span>
+    <div>
+      <span>Cantidad de idiomas</span>
+      <input type="number" id="totalLanguages" readonly>
+      <p>Son los idiomas que se hablan en todo el mundo</p>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <input type="text" id="nameCountry" readonly placeholder="País">
+      <input type="text" id="onlyCapital" readonly placeholder="Capital">
+      <input type="text" id="onlyRegion" readonly placeholder="Región">
+      <input type="text" id="onlySubregion" readonly placeholder="Subregión">
+    </div>
+    <div id="imgFlag">
+    </div>
+  </div>
+
+  <!-- <a href="../Views/infoLanguages.html">
+    <button>Información adicional</button>
+  </a> -->
+
+  <div>
+    <table class='table' id="tableLanguages">
+    </table>
+  </div> 
+
+  <script src="../Scripts/index.js"></script>
+
+</body>
+
+</html>
