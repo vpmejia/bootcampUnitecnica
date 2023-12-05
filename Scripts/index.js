@@ -36,6 +36,7 @@ function handlerData(filterData) {
 
 function paintFlag(container, img) {
   const imageFlag = document.createElement('img');
+  imageFlag.classList.add('img-flag');
   imageFlag.src = img;
   container.appendChild(imageFlag);
 }
@@ -47,25 +48,50 @@ function selectedSearch() {
   const existsValue = nameCountries.find(identifier => identifier.name === selectedCountry);
   if (existsValue) {
     const identifier = existsValue.id;
-    // console.log(identifier);
+
     const specificInfo = dataApi[identifier];
-    // console.log(specificInfo);
-    document.getElementById('nameCountry').value = `Esto es ${selectedCountry}`;
-    document.getElementById('onlyCapital').value = specificInfo.capital;
-    document.getElementById('onlyRegion').value = specificInfo.region;
-    document.getElementById('onlySubregion').value = specificInfo.subregion;
+
+    const infoPais = document.getElementById('info-pais');
+    infoPais.innerHTML = `
+      <hr class="divider">
+      <div class="know-country-container">
+        <h4 class="title">Esto es ${selectedCountry.toUpperCase()}</h4>
+        <a href="../Views/infoLanguages.html"><img src="../img/Flight-rounded.svg" class="know-country-img"></a>
+      </div>
+      <div class="country-container">
+        <div style="padding: -5px">
+          <p type="text" id="onlyCapital" >Capital: ${specificInfo.capital ?? '...'}</p>
+          <p type="text" id="onlyRegion" >Región: ${specificInfo.region ?? '...'}</p>
+          <p type="text" id="onlySubregion">Subregión: ${specificInfo.subregion ?? '...'}</p>
+        </div>
+        <div id="imgFlag" class="img-flag-container">
+        </div>
+      </div>
+    `;
+
 
     const containerFlag = document.getElementById('imgFlag');
+    
     if (containerFlag.childElementCount > 0) {
       containerFlag.removeChild(containerFlag.lastChild);
     }
     paintFlag(containerFlag, specificInfo.flags.png);
 
     document.getElementById('searchCountries').value = '';
-
   } else {
-    document.write("Ups estas perdido");
+    paintAstronaut();
   }
+}
+
+function paintAstronaut() {
+  const infoPais = document.getElementById('info-pais');
+  infoPais.innerHTML = `
+    <hr class="divider">
+    <div class="astronaut-container">
+      <img src="../img/astronaut.gif" style="width:300px">
+      <h4 class="title">Ups! Parece que no has buscado un país...</h4>
+    </div>
+  `;
 }
 
 //total de lenguajes existentes en el mundo
@@ -78,7 +104,7 @@ function totalLanguages(data) {
   }
   ).flat(1))
   ];
-  document.getElementById('totalLanguages').value = allLanguages.length;
+  document.getElementById('totalLanguages').value = allLanguages?.length;
 }
 
 function tableDraw(lanCountry) {
@@ -87,7 +113,6 @@ function tableDraw(lanCountry) {
   if (lanCountry && lanCountry.length > 0) {
     content += "<tbody>";
     for (const posLang of lanCountry) {
-      // debugger;
       content += "<tr>";
       
       content += `<td>${posLang ? posLang.name : ''}</td>`;

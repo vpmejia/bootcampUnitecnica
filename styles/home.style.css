@@ -1,0 +1,185 @@
+.box-information {
+  border: 2px solid grey;
+  border-radius: 7px;
+  padding: 8px 40px;
+  margin: 20px 50px 30px;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 0.4fr));
+  margin: 0 50px;
+}
+
+.grid-item {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.txt-card {
+  font-size: 12px;
+  margin: 0 10px;
+  text-align: justify;
+}
+
+.img-card {
+  width: 65px;
+  margin-top: -15px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.title {
+  margin: 15px 80px;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  /* Espesor de la línea */
+  background-color: #E41F7B;
+  /* Color de la línea (en este caso, rojo) */
+  margin: 20px 70px;
+  /* Margen superior e inferior para separar la línea de otros elementos */
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 210px;
+  border: 1px solid #E41F7B;
+  border-radius: 10px;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+  z-index: 0;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.astronaut-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.country-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+
+.img-flag {
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.know-country-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.know-country-img {
+  width: 30px;
+  margin: 0 80px;
+  cursor: pointer;
+  border-radius: 30%;
+  transition: box-shadow 0.3s ease;
+}
+
+.know-country-img:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    margin: 20px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.4fr));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flip-card {
+    width: 250px;
+    height: 250px;
+  }
+
+  .box-information {
+    font-size: 15px;
+  }
+
+  .txt-card {
+    font-size: 14px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .country-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+}

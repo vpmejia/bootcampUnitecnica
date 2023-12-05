@@ -5,56 +5,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../img/map_Icon.png" type="image/png">
-  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/header.style.css">
+  <link rel="stylesheet" href="../styles/home.style.css">
+  <link href="./infoLanguages.html">
+
   <title>Conociendo paises</title>
 </head>
-
 <body>
 
-  <div class="container">
-    <img src="../img/tierra.jpeg" alt="earth" style="width:100%">
-    <div class="top-right">
-      <input list="nameCountries" id="searchCountries" name="countries" placeholder="¿Qué país quieres conocer hoy?">
-      <datalist id="chooseCountry"></datalist>
-      <button type="button" id="btnSearch" onclick="selectedSearch()">Search</button>
+  <header>
+    <div class="header-container">
+      <div class="tooltip">
+        <a href="#interesantes"><img src="../img/idea-icon.svg" class="idea-img"></a>
+        <span class="tooltiptext">¿Sabías que?...</span>
+      </div>
+      <div class="search-container">
+        <div class="input-container">
+          <input class="search-input" list="nameCountries" id="searchCountries" name="countries"
+            placeholder="¿Qué país quieres conocer hoy?">
+        </div>
+        <a href="#info-pais" class="img-container"> <img src="../img/lupa.png.webp" class="img-container" id="btnSearch"
+            onclick="selectedSearch()"></a>
+        <datalist id="chooseCountry"></datalist>
+      </div>
     </div>
-  </div>
 
-  <div class="box-information">
-    <p>En esta página encontrarás información sobre los países del planeta tierra,
-      puedes filtrar para conocer cerca de 250 países. Se encuentra lo mayor posible en traducción al idioma español</p>
-  </div>
 
-  <div>
-    <span>DATOS INTERESANTES</span>
-    <div>
-      <span>Cantidad de idiomas</span>
-      <input type="number" id="totalLanguages" readonly>
-      <p>Son los idiomas que se hablan en todo el mundo</p>
+  </header>
+  <main>
+    <div class="container">
+      <img src="../img/tierra.jpeg" alt="earth" style="width:100%">
     </div>
-  </div>
 
-  <div>
-    <div>
-      <input type="text" id="nameCountry" readonly placeholder="País">
-      <input type="text" id="onlyCapital" readonly placeholder="Capital">
-      <input type="text" id="onlyRegion" readonly placeholder="Región">
-      <input type="text" id="onlySubregion" readonly placeholder="Subregión">
+    <div class="box-information">
+      <p>En esta página encontrarás información sobre los países del planeta tierra,
+        puedes filtrar para conocer cerca de 250 países. Se encuentra lo mayor posible en traducción al idioma español
+      </p>
     </div>
-    <div id="imgFlag">
-    </div>
-  </div>
+    <section id="interesantes">
+      <hr class="divider">
+      <h4 class="title">¿Sabías que?...</h4>
+      <div class="grid-container" id="grid-container">
+        <!-- Contenido dinamico -->
+      </div>
+    </section>
+    <section id="info-pais">
+      <hr class="divider">
+      <div class="astronaut-container">
+        <img src="../img/astronaut.gif" style="width:300px">
+        <h4 class="title">Ups! Parece que no has buscado un país...</h4>
+      </div>
+    </section>
+  </main>
 
-  <!-- <a href="../Views/infoLanguages.html">
-    <button>Información adicional</button>
-  </a> -->
-
-  <div>
-    <table class='table' id="tableLanguages">
-    </table>
-  </div> 
 
   <script src="../Scripts/index.js"></script>
+  <script src="../Scripts/soft-scroll.js"></script>
+  <script src="../Scripts/sabiasQue.js"></script>
 
 </body>
 
