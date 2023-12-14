@@ -1,0 +1,158 @@
+* {
+  border-radius: 20px;
+}
+
+body {
+  display: block;
+  align-items: center;
+}
+
+.cabecera {
+  position: sticky;
+  top: 0;
+  height: 80px;
+  width: 100% ;
+  background-color: #E41F7B;
+}
+
+.body-container {
+  display: flex;
+  justify-content: center;
+}
+
+.principal-card {
+  width: 80%;
+  border: 3px solid whitesmoke;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 900px;
+  margin-top: 50px;
+  align-self: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.imagenes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20%;
+  margin-right: 20px;
+}
+
+.info-container {
+  width: 80%;
+} 
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: whitesmoke;
+  margin: 0px 70px;
+}
+
+.image-escudo {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.image-bandera {
+  width: 200px;
+  height: 150px;
+  border-radius: 0.5px;
+  border-color: rgba(167, 167, 167, 0.767);
+}
+
+.paisInfo-container {
+  width: 80%;
+  height: 100%;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.nombre-container {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 2fr));
+  margin: 0 50px;
+}
+
+.grid-container-lang {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 2fr));
+  margin: 0 50px;
+}
+
+.grid-item {
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1px 0px;
+}
+
+.card {
+  background-color: transparent;
+  width: 230px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.know-button-container {
+  display: flex;
+  justify-content: end;
+  margin-right: 40px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.know-button {
+  width: 100px;
+  height: 50px;
+  background-color: #E41F7B;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-size: 15px;
+}
+
+.know-button:hover {
+  background-color: #ff4f9d;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.know-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.done-img {
+  width: 40px;
+  margin-right: 5px;
+}
+
+@media (max-width: 1300px) {
+  .imagenes-container {
+    display: none;
+  }
+
+  .paisInfo-container {
+    width: 100%;
+  }
+}

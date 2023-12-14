@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../img/map_Icon.png" type="image/png">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/country.style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Sofia&display=swap" rel="stylesheet">
+  <title>Información Pais</title>
+</head>
+
+<body>
+
+  <a href="../Views/index.html"><img src="../img/title-header.png" width="200px" height="100%"></a>
+
+  <div class="body-container">
+    <div class="principal-card">
+      <div class="nombre-container">
+        <h1 class="title" id="title"></h1>
+      </div>
+
+      <hr class="divider">
+
+      <div class="container">
+
+        <div class="info-container">
+          <div class="grid-container" id="grid-container">
+            <!-- Contenido dinamico información ppl -->
+          </div>
+          <hr class="divider">
+          <div class="grid-container-lang" id="grid-pronunciation">
+            <!-- Contenido dinamico grid Translation -->
+          </div>
+          <div class="know-button-container">
+            <button id="know-button" onclick="openMap()" class="know-button">Conocelo!</button>
+          </div>
+        </div>
+
+        <div class="imagenes-container">
+          <div class="escudo-container">
+            <img id="image-escudo" class="image-escudo">
+          </div>
+          <div class="bandera-container">
+            <img id="image-bandera" class="image-bandera">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <script src="../Scripts/fetchData.js"></script>
+  <script src="../Scripts/functions.js"></script>
+</body>
+
+</html>

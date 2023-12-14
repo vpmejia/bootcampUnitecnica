@@ -13,7 +13,9 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 360px;
+  margin-right: 45px;
+  width: 35%;
+  height: 16px;
 }
 
 .search-input:focus {
@@ -24,6 +26,15 @@ header {
   width: 90%;
   border: none;
   background-color: grey;
+}
+
+.country-img {
+  background-color: grey;
+  border-radius: 10px;
+  margin: 5px;
+  height: 36px;
+  width: 40px;
+  margin-top: 9px;
 }
 
 .idea-img {
@@ -43,7 +54,7 @@ header {
 
 .search-container {
   height: 35px;
-  width: 300px;
+  width: 500px;
   display: flex;
   flex-direction: row;
   border-radius: 10px;

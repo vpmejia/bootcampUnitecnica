@@ -8,14 +8,18 @@
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/header.style.css">
   <link rel="stylesheet" href="../styles/home.style.css">
-  <link href="./infoLanguages.html">
-
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Sofia&display=swap" rel="stylesheet">
   <title>Conociendo paises</title>
 </head>
+
 <body>
 
   <header>
     <div class="header-container">
+      <div class="tooltip">
+        <a href="../Views/flagsCountry.html"><img src="../img/country.svg" class="country-img"></a>
+        <span class="tooltiptext">Elige un país</span>
+      </div>
       <div class="tooltip">
         <a href="#interesantes"><img src="../img/idea-icon.svg" class="idea-img"></a>
         <span class="tooltiptext">¿Sabías que?...</span>
@@ -30,31 +34,31 @@
         <datalist id="chooseCountry"></datalist>
       </div>
     </div>
-
-
   </header>
+  
   <main>
     <div class="container">
-      <img src="../img/tierra.jpeg" alt="earth" style="width:100%">
+      <img src="../img/tierra-1.png" alt="earth" width="100%">
     </div>
 
     <div class="box-information">
-      <p>En esta página encontrarás información sobre los países del planeta tierra,
+      <p class="text-bienvenida">En esta página encontrarás información sobre los países del planeta tierra,
         puedes filtrar para conocer cerca de 250 países. Se encuentra lo mayor posible en traducción al idioma español
       </p>
     </div>
+
     <section id="interesantes">
-      <hr class="divider">
       <h4 class="title">¿Sabías que?...</h4>
       <div class="grid-container" id="grid-container">
         <!-- Contenido dinamico -->
       </div>
     </section>
+    
     <section id="info-pais">
       <hr class="divider">
       <div class="astronaut-container">
-        <img src="../img/astronaut.gif" style="width:300px">
-        <h4 class="title">Ups! Parece que no has buscado un país...</h4>
+        <img src="../img/astronaut.gif" style="width:500px">
+        <h4 class="title">Ups! Parece que no has seleccionado un país...</h4>
       </div>
     </section>
   </main>
